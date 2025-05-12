@@ -3,7 +3,7 @@ import { useAuth } from "../../context/AuthContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import "../../styles/PersonalInfo.css"
+
 
 const PersonalInfoForm = () => {
   const { user } = useAuth();
