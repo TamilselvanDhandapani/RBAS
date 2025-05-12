@@ -1,0 +1,17 @@
+{
+  "name": "bride-boutique",
+  "version": "1.0.0",
+  "description": "Bride Boutique E-commerce Platform",
+  "private": true,
+  "workspaces": [
+    "client"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=client",
+    "build": "npm run build --workspace=client",
+    "preview": "npm run preview --workspace=client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
