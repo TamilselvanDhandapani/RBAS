@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaAward, FaHeart, FaUsers, FaRegSmile } from 'react-icons/fa';
-import '../../styles/WhyUs.css';
+import "/styles/WhyUs.css';
 
 const WhyUs = () => {
   const features = [
