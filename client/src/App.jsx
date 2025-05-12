@@ -34,8 +34,10 @@ import DressList from "./Componets/User/DressList";
 import DressDetail from "./Componets/User/DressDetail";
 import MyAccount from "./Componets/User/MyAccount";
 import PersonalInfoForm from "./Componets/User/PersonalInfoForm";
-import AddressForm from "./Components/User/AddressForm";
-import OrderList from "./Components/User/OrderList";
+import AddressForm from "./Componets/User/AddressForm";
+import OrderList from "./Componets/User/OrderList";
+import WishList from "./Components/User/WishList";
+
 import WishList from "./Components/User/WishList";
 
 const App = () => {
@@ -158,7 +160,7 @@ const App = () => {
             <Route path="personal-info" element={<PersonalInfoForm />} />
             <Route path="address" element={<AddressForm />} />
             <Route path="orderlist" element={<OrderList />} />
-            <Route path="wishlist" element={<WishList />} />
+            <Route path="wishlist" element={<Wishlist />} />
           </Route>
         </Routes>
       </Router>
