@@ -6,7 +6,7 @@ import { useAuth } from "../../context/AuthContext";
 import CartContext from "../../context/CartContext";
 import "../../styles/Wishlist.css";
 
-const Wishlist = () => {
+const WishList = () => {
   const { user } = useAuth();
   const { dispatch: cartDispatch, cartItems } = useContext(CartContext);
 
@@ -119,4 +119,4 @@ const Wishlist = () => {
   );
 };
 
-export default Wishlist;
+export default WishList;
