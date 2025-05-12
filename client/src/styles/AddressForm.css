@@ -1,0 +1,203 @@
+.address-manager {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.address-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.address-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.toggle-form-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-form-btn:hover {
+  background-color: #218838;
+}
+
+/* Address Form */
+.address-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.address-form h3 {
+  text-align: center;
+  color: #d63384;
+  font-size: 1.4rem;
+}
+
+.address-form input,
+.address-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s;
+}
+
+.address-form input:focus,
+.address-form textarea:focus {
+  border-color: #d63384;
+  outline: none;
+}
+
+/* Form Buttons Group */
+.form-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.address-form button {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.address-form button[type="submit"] {
+  background-color: #d63384;
+  color: white;
+}
+
+.address-form button[type="submit"]:hover {
+  background-color: #b82c6a;
+}
+
+.cancel-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #5a6268;
+}
+
+/* Address Cards */
+.address-card {
+  border: 1px solid #e0e0e0;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  background-color: #fafafa;
+}
+
+.address-card p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.address-card strong {
+  font-weight: 600;
+  color: #111;
+}
+
+/* Action Buttons */
+.address-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.address-actions button {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.address-actions button:first-child {
+  background-color: #3498db;
+  color: white;
+}
+
+.address-actions button:first-child:hover {
+  background-color: #2980b9;
+}
+
+.address-actions button:last-child {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.address-actions button:last-child:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .address-manager {
+    padding: 1rem;
+  }
+
+  .address-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .address-actions button {
+    width: 100%;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .form-buttons button {
+    width: 100%;
+  }
+
+  .toggle-form-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

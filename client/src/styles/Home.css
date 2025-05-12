@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
+/* ========== WRAPPER ========== */
+.home-wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff00;
+}
+
+/* ========== HERO SECTION ========== */
+.hero-content-one {
+  position: relative;
+  margin: 2rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.hero-slide {
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 4s ease;
+}
+
+.hero-slide:hover .hero-image {
+  transform: scale(1.05);
+}
+
+/* ========== OVERLAY ========== */
+.improved-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* ========== TEXT STYLES ========== */
+.hero-title {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 2.2rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.hero-description {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 1.1rem;
+  color: #f0f0f0;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ========== BUTTON ========== */
+.get-started-btn {
+  background-color: #ff0a54;
+  color: #fff;
+  border: none;
+  padding: 12px 36px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-family: 'Cinzel Decorative', cursive;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.get-started-btn:hover {
+  background-color: #e6335f;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* ========== SWIPER PAGINATION ========== */
+.swiper-pagination-bullet {
+  background: white !important;
+  opacity: 0.4;
+  width: 10px;
+  height: 10px;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* ========== ANIMATED WORD FADE ========== */
+.word-fade {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeWord 0.8s forwards;
+  animation-delay: calc(var(--i, 0) * 0.1s);
+}
+
+@keyframes fadeWord {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== CATEGORIES SECTION ========== */
+.categories-section {
+  margin: 4rem 0;
+}
+
+.categories-heading {
+  text-align: center;
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 2rem;
+}
+
+.categories-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* ========== CATEGORY CARD ========== */
+.category-card {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  font-family: 'Cinzel Decorative', cursive;
+  text-decoration: none;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  transition: background 0.3s ease;
+  z-index: 0;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.category-card:hover::before {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.category-card span {
+  position: relative;
+  z-index: 1;
+}
+
+/* ========== CATEGORY BACKGROUNDS ========== */
+.cat-lehankas { background-image: url("./cat2.jpg"); }
+.cat-cholis   { background-image: url("./cat1.jpg"); }
+.cat-tops     { background-image: url("./cat3.jpg"); }
+.cat-sarees   { background-image: url("./cat4.jpg"); }
+.cat-gown     { background-image: url("./cat5.jpg"); }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .hero-slide {
+    height: 380px;
+  }
+
+  .get-started-btn {
+    padding: 10px 28px;
+    font-size: 0.95rem;
+  }
+
+  .categories-grid {
+    gap: 1rem;
+  }
+
+  .category-card {
+    width: 160px;
+    height: 160px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-slide {
+    height: 280px;
+  }
+
+  .get-started-btn {
+    padding: 8px 22px;
+    font-size: 0.85rem;
+  }
+
+  .categories-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .category-card {
+    width: 130px;
+    height: 130px;
+    font-size: 1rem;
+  }
+}

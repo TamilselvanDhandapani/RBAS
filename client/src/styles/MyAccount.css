@@ -1,0 +1,141 @@
+/* My Account Container */
+.myaccount-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Account Summary */
+  .account-summary {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+  }
+  
+  .account-summary h3 {
+    color: #333;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .account-summary p {
+    color: #666;
+    font-size: 1rem;
+    margin: 0.25rem 0;
+  }
+  
+  /* Account Layout */
+  .account-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+  }
+  
+  .sidebar h2 {
+    color: #333;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #f0f0f0;
+    font-weight: 600;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 0.75rem;
+  }
+  
+  .sidebar li a {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: #444;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+  }
+  
+  .sidebar li a:hover {
+    background-color: #f8f8f8;
+    color: #000;
+  }
+  
+  .sidebar li.active a {
+    background-color: #f0f7ff;
+    color: #0066cc;
+    font-weight: 500;
+  }
+  
+  .nav-icon {
+    margin-right: 10px;
+    font-size: 1.1em;
+  }
+  
+  /* Account Content Area */
+  .account-content {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    flex: 1;
+  }
+  
+  .account-default-view {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .account-default-view h3 {
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .account-default-view p {
+    color: #666;
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .account-layout {
+      flex-direction: row;
+    }
+  
+    .sidebar {
+      width: 280px;
+      position: sticky;
+      top: 1rem;
+      height: fit-content;
+    }
+  
+    .account-content {
+      padding: 2rem;
+      min-height: 500px;
+    }
+  }
+  
+  /* Animation for route transitions */
+  .account-content > * {
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }

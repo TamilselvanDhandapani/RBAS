@@ -1,0 +1,156 @@
+/* ============ PRODUCT FORM CONTAINER ============ */
+
+.product-form-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2.5rem 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* ============ FORM HEADING ============ */
+  
+  .form-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #7d5fd3;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* ============ FORM MAIN STRUCTURE ============ */
+  
+  .product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  /* ============ INPUT GROUP ============ */
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .input-group label {
+    font-weight: 600;
+    color: #444;
+    font-size: 1rem;
+  }
+  
+  .input-group input,
+  .input-group textarea {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+  }
+  
+  .input-group input:focus,
+  .input-group textarea:focus {
+    background: #fff;
+    border-color: #7d5fd3;
+    box-shadow: 0 0 0 2px rgba(125, 95, 211, 0.2);
+    outline: none;
+  }
+  
+  /* ============ FILE UPLOAD SECTION ============ */
+  
+  .upload-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .upload-section label {
+    font-weight: 600;
+    color: #444;
+    font-size: 1rem;
+  }
+  
+  .upload-preview-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+  
+  .upload-preview {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease;
+  }
+  
+  .upload-preview:hover {
+    transform: scale(1.05);
+  }
+  
+  /* ============ SUBMIT BUTTON ============ */
+  
+  .submit-button {
+    padding: 0.9rem 1.5rem;
+    background-color: #7d5fd3;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  .submit-button:hover {
+    background-color: #6748c7;
+    transform: scale(1.03);
+  }
+  
+  /* ============ UPLOAD PROGRESS BAR ============ */
+  
+  .progress-bar-container {
+    margin-top: 1rem;
+    width: 100%;
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    height: 10px;
+    background: linear-gradient(90deg, #7d5fd3, #6748c7);
+    width: 0%;
+    transition: width 0.4s ease;
+  }
+  
+  input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+  /* ============ RESPONSIVE DESIGN ============ */
+  
+  @media (max-width: 768px) {
+    .product-form-container {
+      margin: 1rem;
+      padding: 2rem 1.5rem;
+    }
+  
+    .form-title {
+      font-size: 1.7rem;
+    }
+  
+    .upload-preview {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  

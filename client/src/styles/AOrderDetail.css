@@ -1,0 +1,261 @@
+/* AOrderDetail.css */
+
+/* Base Styles */
+.order-detail-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.loading-container,
+.error-container,
+.not-found {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+.error-container {
+  color: #dc3545;
+}
+
+.not-found {
+  color: #6c757d;
+}
+
+/* Header Styles */
+.order-header {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.order-header h2 {
+  color: #d63384;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.order-meta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.meta-item strong {
+  font-weight: 600;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-confirmed {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.status-shipped {
+  background-color: #e2e3e5;
+  color: #383d41;
+}
+
+.status-delivered {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Invoice Branding */
+.invoice-branding {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.invoice-logo {
+  max-width: 80px;
+  height: auto;
+}
+
+.invoice-brand {
+  color: #d63384;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* Sections */
+.order-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.order-section h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #d63384;
+  font-size: 1.3rem;
+}
+
+/* Shipping Info */
+.shipping-info p {
+  margin: 0.5rem 0;
+}
+
+/* Items List */
+.item-card {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.item-thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.item-card h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.item-card p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Invoice Summary */
+.invoice-summary p {
+  margin: 0.5rem 0;
+}
+
+.thank-you-note {
+  font-size: 1.1rem;
+  margin-top: 1.5rem !important;
+  color: #d63384;
+  font-weight: 600;
+}
+
+/* Status Update */
+.order-section select {
+  padding: 0.5rem;
+  margin-right: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.order-section button {
+  padding: 0.5rem 1.5rem;
+  background-color: #d63384;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.order-section button:hover {
+  background-color: #bb2d7b;
+}
+
+.order-section button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Invoice Buttons */
+.invoice-buttons {
+  padding: 0.5rem 1.5rem;
+  margin-right: 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.invoice-buttons:hover {
+  background-color: #218838;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .order-detail-container {
+    padding: 1rem;
+  }
+  
+  .order-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .item-card {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .item-thumbnail {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+  }
+}
+
+@media print {
+  body {
+    padding: 20px;
+    background-color: white;
+  }
+  
+  .order-section {
+    page-break-inside: avoid;
+  }
+  
+  .invoice-buttons, 
+  .status-update-section {
+    display: none !important;
+  }
+}

@@ -1,0 +1,237 @@
+/* ============ BASE ============ */
+.about-section {
+  padding: 1rem 0;
+  background-color: #fff9f9;
+  overflow: hidden;
+}
+
+.about-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 1.5rem;
+}
+
+/* ============ LAYOUT ============ */
+.about-left,
+.about-right {
+  flex: 1 1 500px;
+  min-width: 350px;
+}
+
+/* ============ SWIPER IMAGE CONTAINER ============ */
+.swiper-container {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-container {
+  position: relative;
+  padding-top: 95%;
+  overflow: hidden;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease-in-out;
+}
+
+.image-container:hover img {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+/* Swiper Pagination */
+.about-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+
+.about-swiper .swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+/* ============ CONTENT ============ */
+.about-content {
+  padding: 0 1rem;
+}
+
+.about-section-title {
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  color: #333;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  font-family: "Playfair Display", serif;
+}
+
+.about-title-decoration {
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: #e0a1a1;
+}
+
+.section-intro {
+  color: #666;
+  font-size: clamp(0.95rem, 2vw, 1rem);
+
+  max-width: 90%;
+}
+
+/* ============ SERVICES ============ */
+.services-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-item {
+  display: flex;
+  align-items: flex-start;
+
+  padding: 0.75rem 0;
+  transition: background 0.3s ease;
+}
+
+.service-text {
+  flex: 1;
+}
+
+.service-title {
+  font-size: 1.1rem;
+  color: #333;
+
+  font-weight: 600;
+
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.service-description {
+  color: #666;
+  font-size: 0.95rem;
+
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+/* === Active Service Highlight === */
+.service-item.active-service .service-title {
+  color: #d63384;
+  font-weight: 700;
+}
+
+.service-item.active-service .service-description {
+  color: #444;
+  font-weight: 500;
+}
+
+/* ============ BUTTON ============ */
+.explore-btn-div {
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.explore-btn {
+  background-color: #d63384;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: #b82a6c;
+  transform: translateY(-2px);
+}
+
+/* ============ FADE-IN CSS ANIMATIONS ============ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.fade-in.delay-1 {
+  animation-delay: 0.2s;
+}
+.fade-in.delay-2 {
+  animation-delay: 0.4s;
+}
+.fade-in.delay-3 {
+  animation-delay: 0.6s;
+}
+.fade-in.delay-4 {
+  animation-delay: 0.8s;
+}
+.fade-in.delay-5 {
+  animation-delay: 1s;
+}
+.fade-in.delay-6 {
+  animation-delay: 1.2s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============ RESPONSIVE DESIGN ============ */
+@media (max-width: 1024px) {
+  .about-left,
+  .about-right {
+    width: 100%;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-section-title,
+  .section-intro,
+  .explore-btn-div {
+    text-align: center;
+  }
+
+  .section-intro {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-item {
+    gap: 1rem;
+  }
+
+  .about-section-title {
+    font-size: 1.6rem;
+  }
+
+  .explore-btn {
+    font-size: 0.95rem;
+    padding: 9px 18px;
+  }
+
+  .section-intro {
+    font-size: 0.9rem;
+  }
+}
