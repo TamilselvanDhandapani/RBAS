@@ -36,7 +36,7 @@ import MyAccount from "./Componets/User/MyAccount";
 import PersonalInfoForm from "./Componets/User/PersonalInfoForm";
 import AddressForm from "./Componets/User/AddressForm";
 import OrderList from "./Componets/User/OrderList";
-import WishList from "./Components/User/WishList";
+
 
 import WishList from "./Components/User/WishList";
 
