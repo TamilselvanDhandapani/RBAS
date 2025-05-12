@@ -36,7 +36,7 @@ import MyAccount from "./Componets/User/MyAccount";
 import PersonalInfoForm from "./Componets/User/PersonalInfoForm";
 import AddressForm from "./Componets/User/AddressForm";
 import OrderList from "./Componets/User/OrderList";
-import Wishlist from "./Components/User/Wishlist";
+import WishList from "./Components/User/WishList";
 
 const App = () => {
   return (
@@ -158,7 +158,7 @@ const App = () => {
             <Route path="personal-info" element={<PersonalInfoForm />} />
             <Route path="address" element={<AddressForm />} />
             <Route path="orderlist" element={<OrderList />} />
-            <Route path="wishlist" element={<Wishlist />} />
+            <Route path="wishlist" element={<WishList />} />
           </Route>
         </Routes>
       </Router>
